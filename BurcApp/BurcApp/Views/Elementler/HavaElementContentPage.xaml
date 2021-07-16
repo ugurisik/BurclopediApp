@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Elementler.HavaElementContentPage"
+              xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             Title="ELEMENTLER"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,10,0">
+
+            <Frame Margin="0,25,0,10" HasShadow="True" BackgroundColor="#475d92" Padding="0" CornerRadius="10">
+                <Label Text="HAVA GRUBU" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" Padding="10" HorizontalOptions="Center" />
+            </Frame>
+
+            <ScrollView>
+                <StackLayout>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_ikizler_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="21 Mayıs - 21 Haziran" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_terazi_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="23 Eylül - 22 Ekim" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_kova_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="20 Ocak - 18 Şubat" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Frame Padding="0" HasShadow="True" CornerRadius="10" BackgroundColor="White" Opacity="0.75" Margin="0,10,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="10,5">
+                            <local:CustomLabelJustify Text="   Bu burçlar en entelektüel ve akıllı burçlardır. Meraklı ve hareketlidirler. Her şeye meraklı olmaları da belirgin özelliklerindendir.  Yeni fikirlere açıktırlar. Konuşkan ve uyanıktırlar. Tatlı olmalarıyla her istediklerini yaptırırken becerikli oluşlarıyla da tüm zorlukların üstesinden gelirler. Sosyal bir yapıya sahiptirler. Hava burçları Zodyakın bilgi işlemcileridirler. Diğer burçların içerisinde en az duygusal ve tarafsız burç olma özelliğine sahiptirler. Onlar için doğru ve gerçek çok önemlidir." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="İKİZLER: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Hava burçları içerisinde haberleşme alanında en yetenekli ve akıl yürütme yeteneği en gelişmiş burçtur. Analiz yapma, sentezleme ve bilgi toplama anlamında varlıklarını oldukça belli ederler. Bu burcun genelinde yazı yazma yeteneği gelişmiştir. Doğal olarak da haberci ya da gazeteci olmaları kaçınılmazdır. (olurlar ya da olmak isterler.) Tv ve haber odalarında bulunmaktan büyük keyif alırlar." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="TERAZİ: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Denge ve adalet kavramlarıyla anılırlar. Bunun için mücadele ederler. Yargı sisteminde birçok avukat, hakim yada savcı terazi burcudur. Bunun yanı sıra güzel sanatlarda da terazi burçlarına rastlamak mümkündür." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="KOVA: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="İcat kabiliyeti olan ve buna ek olarak zekasını ve teknolojiyi de birleştirerek insanlığın yaşam kalitesini yükseltmeye çalışan bir burçtur. Aynı zamanda kardeşlik ve arkadaşlık kavramlarına önem verir. Doğa bilimleri teknoloji ve politika da kova burcunun alanlarına girer. İyi yönde gelişen sosyal değişikliklere açıktır." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

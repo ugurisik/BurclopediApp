@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Elementler.ElementlerContentPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="ELEMENTLER"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="AtesElementButton" Grid.Row="0" Grid.Column="0" CommandParameter="1" Clicked="AtesElementButton_Clicked" ContentLayout="Top,0" ImageSource="ates.png" TextColor="White" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <Button x:Name="TorakElementButton" Grid.Row="0" Grid.Column="1" CommandParameter="2" Clicked="TorakElementButton_Clicked" ContentLayout="Top,0" ImageSource="toprak.png" TextColor="White" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <Button x:Name="SuElementButton" Grid.Row="1" Grid.Column="0" CommandParameter="4" Clicked="SuElementButton_Clicked" ContentLayout="Top,0" ImageSource="su.png" TextColor="White" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <Button x:Name="HavaElementButton" Grid.Row="1" Grid.Column="1" CommandParameter="5" Clicked="HavaElementButton_Clicked" ContentLayout="Top,0" ImageSource="hava.png" TextColor="White" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

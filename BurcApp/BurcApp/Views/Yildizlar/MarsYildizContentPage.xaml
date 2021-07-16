@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Yildizlar.MarsYildizContentPage"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             Title="YILDIZLAR"
+                BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,10,0">
+
+            <Frame Margin="0,25,0,10" HasShadow="True" BackgroundColor="#475d92" Padding="0" CornerRadius="10">
+                <Label Text="MARS GEZEGENİ" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" Padding="10" HorizontalOptions="Center" />
+            </Frame>
+
+            <!--<AbsoluteLayout Margin="0,0,0,25">
+                <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5, 0, 1.5, 1.5" AbsoluteLayout.LayoutFlags="All"/>
+                <Label Text="MARS" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1.5, -1, -1" />
+            </AbsoluteLayout>-->
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_koc_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="20 Nisan - 20 Mayıs " FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Frame Padding="0" HasShadow="True" CornerRadius="10" BackgroundColor="White" Opacity="0.75" Margin="0,10,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="10,5">
+
+                            <local:CustomLabelJustify Text="   Romalıların eski savaş tanrısı olan Mars şiddet ve ani öfkeyi temsil eder. Diğer yandan enerjik, atılgan ve cesurdur. Dayanıklılık ve kararlılık isteyen herhangi bir olayda Mars'ın diğer gezegenlerle uyum içinde olması gerekir. Mars iyi açılar yaptığı zaman hemen hemen her durumda ayakta kalmanızı ve ilerlemenizi sağlayacak kapasiteye sahiptir. Mars enerjisinin çok olduğu dönemlerde öfke patlamaları ve kaza olasılıkları artar." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify Text="   Astrolojide Mars Koç burcunun yöneticisidir. Aynı zamanda Akrep burcunun da ikinci yöneticisidir. Zodyak etrafındaki turunu iki senede tamamlayan Mars her burçta ortalama altı hafta kalır. Geri gittiği zamanlarda ise aynı burçta 7-8 ay kalabilir." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

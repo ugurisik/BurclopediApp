@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.AnaSayfaMaster"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="Menü"
+             BackgroundImageSource="hamburger_menu_arkaplan.png"
+             BackgroundColor="Transparent"
+             >
+    
+    <StackLayout>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Spacing="0" Padding="0">
+                <Image Source="hamburger_menu_logo.png" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <Image Source="burclopedi_yazi.png" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <Image Source="hamburger_menu_line.png" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <!--<Label Text="BURÇLOPEDİ" FontSize="36" FontFamily="Comforta" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,0,0,10"/>-->
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" >
+                <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+                    <Grid Margin="0,20,0,0" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                            <RowDefinition Height="65"/>
+                        </Grid.RowDefinitions>
+
+                        <ImageButton x:Name="MenuBurclarImgBtn" Grid.Row="0" Grid.Column="0" Source="btn_menu_burclar.png" Clicked="MenuBurclarImgBtn_Clicked" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <ImageButton x:Name="MenuBurcOgrenImgBtn" Grid.Row="1" Grid.Column="0" Source="btn_burcunu_ogren.png" Clicked="MenuBurcOgrenImgBtn_Clicked" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <ImageButton x:Name="MenuBurcUyumuImgBtn" Grid.Row="2" Grid.Column="0" Source="btn_menu_burclarin_uyumu.png" Clicked="MenuBurcUyumuImgBtn_Clicked" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <ImageButton x:Name="MenuYukselenBurcImgBtn" Grid.Row="3" Grid.Column="0" Source="btn_menu_yukselen_burc_bulma.png" Clicked="MenuYukselenBurcImgBtn_Clicked_1" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <ImageButton x:Name="MenuYildizlarImgBtn" Grid.Row="4" Grid.Column="0" Source="btn_menu_yildizlar.png" Clicked="MenuYildizlarImgBtn_Clicked" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <ImageButton x:Name="MenuElementlerImgBtn" Grid.Row="5" Grid.Column="0" Source="btn_menu_elementler.png" Clicked="MenuElementlerImgBtn_Clicked" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                        <!--<ImageButton x:Name="MenuBurclarinAdlariImgBtn" Grid.Row="5" Grid.Column="0" Source="btn_menu_burc_isimleri_nereden.png" BackgroundColor="Transparent" />-->
+
+                        <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="Burçlar" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Verdana" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Row="1" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="Burçların Uyumu" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Verdana" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Row="2" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="Yükselen Burç Bulma" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Verdana" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Row="3" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="Yıldızlar" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Verdana" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Row="4" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="Elementler" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Verdana" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout Grid.Row="5" Grid.Column="0">
+                        <ImageButton Source="btn_bg.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" WidthRequest="500" AbsoluteLayout.LayoutFlags="All"/>
+                        <StackLayout Spacing="-5" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35, -1, -1">
+                            <Label Text="Burç İsimleri" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Verdana" />
+                            <Label Text="Nereden Geliyor?" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Verdana" />
+                        </StackLayout>
+                    </AbsoluteLayout>-->
+                    </Grid>
+                </ScrollView>
+
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

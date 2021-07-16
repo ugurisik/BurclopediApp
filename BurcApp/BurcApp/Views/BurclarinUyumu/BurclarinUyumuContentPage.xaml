@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.BurclarinUyumu.BurclarinUyumuContentPage"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="BURÇLARIN UYUMU"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <controls:MTAdView x:Name="ReklamView" Grid.Row="0" HeightRequest="50" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+ 
+                <Frame Grid.Row="1" BackgroundColor="#dcf6f6" Padding="10,5" HasShadow="true" HorizontalOptions="CenterAndExpand" CornerRadius="25">
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="StartAndExpand" Text="Cinsiyetiniz" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" FontFamily="Comforta" />
+                        <RadioButton x:Name="erkekRadioButton" GroupName="Cinsiyet" Content="ERKEK" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                        <RadioButton x:Name="kadinRadioButton" GroupName="Cinsiyet" Content="KADIN" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <ScrollView Grid.Row="2" Padding="0,0,10,0" Margin="0,10,0,0">
+                    <Grid ColumnSpacing="20" HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#9bd8ff" HasShadow="True" CornerRadius="25" Padding="0">
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="65" />
+                                    <ColumnDefinition Width="65" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="ERKEK" TextColor="Black" FontSize="Medium" FontFamily="Comforta" WidthRequest="130" HorizontalTextAlignment="Center" />
+
+                                <ImageButton x:Name="ErkekKocButton" Grid.Row="1" Grid.Column="0" CommandParameter="1" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_koc_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekBogaButton" Grid.Row="1" Grid.Column="1" CommandParameter="2" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_boga_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekIkizlerButton" Grid.Row="2" Grid.Column="0" CommandParameter="3" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_ikizler_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekYengecButton" Grid.Row="2" Grid.Column="1" CommandParameter="4" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_yengec_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekAslanButton" Grid.Row="3" Grid.Column="0" CommandParameter="5" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_aslan_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekBasakButton" Grid.Row="3" Grid.Column="1" CommandParameter="6" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_basak_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekTeraziButton" Grid.Row="4" Grid.Column="0" CommandParameter="7" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_terazi_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekAkrepButton" Grid.Row="4" Grid.Column="1" CommandParameter="8" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_akrep_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekYayButton" Grid.Row="5" Grid.Column="0" CommandParameter="9" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_yay_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekOglakButton" Grid.Row="5" Grid.Column="1" CommandParameter="10" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_oglak_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekKovaButton" Grid.Row="6" Grid.Column="0" CommandParameter="11" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_kova_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="ErkekBalikButton" Grid.Row="6" Grid.Column="1" CommandParameter="12" Clicked="ErkekButton_Clicked" Aspect="AspectFit" Source="logo_balik_uyum.png" BackgroundColor="#ffc0cb" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                            </Grid>
+                        </Frame>
+
+                        <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#ffc0cb" HasShadow="True" CornerRadius="25" Padding="0">
+                            <Grid  Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                    <RowDefinition Height="65" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="65" />
+                                    <ColumnDefinition Width="65" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="KADIN" FontSize="Medium" TextColor="Black" FontFamily="Comforta" WidthRequest="130" HorizontalTextAlignment="Center" />
+
+                                <ImageButton x:Name="KadinKocButton" Grid.Row="1" Grid.Column="0" CommandParameter="1" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_koc_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinBogaButton" Grid.Row="1" Grid.Column="1" CommandParameter="2" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_boga_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinIkizlerButton" Grid.Row="2" Grid.Column="0" CommandParameter="3" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_ikizler_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinYengecButton" Grid.Row="2" Grid.Column="1" CommandParameter="4" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_yengec_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinAslanButton" Grid.Row="3" Grid.Column="0" CommandParameter="5" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_aslan_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinBasakButton" Grid.Row="3" Grid.Column="1" CommandParameter="6" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_basak_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinTeraziButton" Grid.Row="4" Grid.Column="0" CommandParameter="7" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_terazi_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinAkrepButton" Grid.Row="4" Grid.Column="1" CommandParameter="8" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_akrep_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinYayButton" Grid.Row="5" Grid.Column="0" CommandParameter="9" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_yay_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinOglakButton" Grid.Row="5" Grid.Column="1" CommandParameter="10" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_oglak_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinKovaButton" Grid.Row="6" Grid.Column="0" CommandParameter="11" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_kova_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+
+                                <ImageButton x:Name="KadinBalikButton" Grid.Row="6" Grid.Column="1" CommandParameter="12" Clicked="KadinButton_Clicked" Aspect="AspectFit" Source="logo_balik_uyum.png" BackgroundColor="#9bd8ff" BorderWidth="2" BorderColor="Transparent" CornerRadius="10" />
+                            </Grid>
+                        </Frame>
+                     
+                    </Grid>
+                </ScrollView>
+
+                <Button Grid.Row="3" Text="GÖSTER" Clicked="Button_Clicked" BackgroundColor="#223965" CornerRadius="10" TextColor="White" FontFamily="Comforta" FontSize="Medium" Margin="0,0,0,2" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" WidthRequest="150" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

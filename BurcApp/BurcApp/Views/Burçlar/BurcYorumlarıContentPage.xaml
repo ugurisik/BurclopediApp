@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Burçlar.BurcYorumlarıContentPage"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             BackgroundImageSource="arkaplan_sade.png"
+             Title="BURÇ YORUMLARI"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid RowSpacing="0" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0" Margin="0,0,0,25">
+                    <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5, 0, 1.5, 1.5" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label x:Name="BurcAdLabel" Text="" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1.5, -1, -1" />
+                </AbsoluteLayout>-->
+
+                <Image x:Name="LogoImage" Grid.Row="0" HeightRequest="100" WidthRequest="100" Margin="0,10,0,0"/>
+
+                <controls:MTAdView x:Name="ReklamView" Grid.Row="1" HeightRequest="50" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                <StackLayout Grid.Row="2" Orientation="Horizontal" HeightRequest="50">
+                    <Button x:Name="BugunButton" Text="BUGÜN" IsVisible="false" BackgroundColor="#34a8ba" Clicked="BugunButton_Clicked" TextColor="White" HeightRequest="45" CornerRadius="10" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <Button x:Name="BuHaftaButton" Text="BU HAFTA" IsVisible="false" BackgroundColor="#223965" Clicked="BuHaftaButton_Clicked" TextColor="White" HeightRequest="45" CornerRadius="10" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                </StackLayout>
+
+                <ActivityIndicator x:Name="yuklemeIndicator" Grid.Row="3" IsRunning="True" Color="#223965" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Grid x:Name="yorumlargrid" Grid.Row="3" IsVisible="false" VerticalOptions="FillAndExpand" Padding="5,0">
+                    <!--<Label Text="BU HAFTANIN YORUMU" BackgroundColor="Transparent" TextColor="Black" FontSize="Large" FontAttributes="Bold" FontFamily="Comforta"/>
+
+                    <BoxView HeightRequest="1" WidthRequest="300" HorizontalOptions="StartAndExpand" Color="Black"/>-->
+
+                    <Image Source="btn_background_menu.png" VerticalOptions="StartAndExpand" Aspect="Fill" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <ScrollView Grid.Row="0" Orientation="Vertical" HorizontalScrollBarVisibility="Never" Padding="0" Margin="0,50,0,0">
+                            <StackLayout>
+                                <Label x:Name="BaslikLabel" Text="" TextColor="Black" FontSize="Title" FontFamily="Comforta" LineBreakMode="WordWrap" Margin="5,0" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <StackLayout HorizontalOptions="Center" Margin="10,0">
+                                        <Label Text="AŞK" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+                                        <AbsoluteLayout >
+                                            <control:ProgressRing x:Name="AskProgressRing" RingThickness="5" RingProgressColor="Red" HeightRequest="60" WidthRequest="60" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                            <Label x:Name="AskLabel" Text="70%" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                        </AbsoluteLayout>
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="Center" Margin="10,0">
+                                        <Label Text="PARA" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+                                        <AbsoluteLayout >
+                                            <control:ProgressRing x:Name="ParaProgressRing" RingThickness="5"  RingProgressColor="ForestGreen" HeightRequest="60" WidthRequest="60" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                            <Label x:Name="ParaLabel" Text="50%" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                        </AbsoluteLayout>
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="Center" Margin="10,0">
+                                        <Label Text="SAĞLIK" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+                                        <AbsoluteLayout >
+                                            <control:ProgressRing x:Name="SaglikProgressRing" RingThickness="5" RingProgressColor="DeepSkyBlue" HeightRequest="60" WidthRequest="60" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                            <Label x:Name="SaglikLabel" Text="30%" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                                        </AbsoluteLayout>
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <StackLayout x:Name="YorumGunlukStackLayout" Padding="10,5">
+
+                                    <!--<local:CustomLabelJustify x:Name="MottoLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="GÜNÜN SLOGANI: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="MottoSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>-->
+
+                                    <Label Text="GÜNÜN SLOGANI" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" HorizontalOptions="CenterAndExpand"/>
+                                    <Label x:Name="MottoSpan" Text="" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+
+                                    <local:CustomLabelJustify x:Name="GenelYorumLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="GENEL YORUM: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="GenelYorumSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>
+
+                                    <local:CustomLabelJustify x:Name="AskYorumLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="AŞK YORUMU: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="AskYorumSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>
+
+                                    <local:CustomLabelJustify x:Name="IsYorumLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="İŞ YORUMU: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="IsYorumSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>
+
+                                    <local:CustomLabelJustify x:Name="ParaYorumLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="PARA YORUMU: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="ParaYorumSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>
+
+                                    <local:CustomLabelJustify x:Name="YasamYorumLabel">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="YAŞAM YORUMU: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                                <Span x:Name="YasamYorumSpan" Text="" FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </local:CustomLabelJustify>
+
+                                </StackLayout>
+                                
+                                <StackLayout x:Name="YorumHaftalikStackLayout" IsVisible="false" Padding="10,5">
+                                    <local:CustomLabelJustify x:Name="YorumHaftalikLabel" Text="" TextColor="Black" FontSize="Medium" FontFamily="Comforta" LineBreakMode="WordWrap" Margin="5,15,5,0" />
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </ScrollView>
+
+                        <StackLayout x:Name="AltKisimStackLayout" IsVisible="false" Grid.Row="1" HeightRequest="50" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="15,0,0,0">
+
+                            <Button Text="PAYLAŞ" BackgroundColor="#223965" Clicked="Paylas_Tapped" TextColor="White" HeightRequest="45" Padding="10,5" CornerRadius="5" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                            <Button Text="YORUMLARI OKU" BackgroundColor="#223965" Clicked="TapGestureRecognizer_Tapped" TextColor="White" HeightRequest="45" Padding="10,5" CornerRadius="5" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="10,0,0,0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                            
+                            <!--<AbsoluteLayout HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                                <AbsoluteLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Paylas_Tapped"/>
+                                </AbsoluteLayout.GestureRecognizers>
+                                <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                                <Label Text="PAYLAŞ" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                            </AbsoluteLayout>
+
+                            <AbsoluteLayout HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                                <AbsoluteLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </AbsoluteLayout.GestureRecognizers>
+                                <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                                <Label Text="YORUMLARI OKU" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                            </AbsoluteLayout>-->
+                        </StackLayout>
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

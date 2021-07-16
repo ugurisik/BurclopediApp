@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Burçlar.GunlukBurcYorumlariContentPage"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="WhiteSmoke"
+             Title="BUGÜN"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="0" Spacing="0">
+
+            <Grid RowSpacing="0" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="65"/>-->
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="65"/>
+                </Grid.RowDefinitions>
+
+                <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0" Margin="0,0,0,25">
+                    <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5, 0, 1.5, 1.5" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label x:Name="BurcAdLabel" Text="" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1.5, -1, -1" />
+                </AbsoluteLayout>-->
+
+                <controls:MTAdView x:Name="ReklamView" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" Margin="0,5,0,0"/>
+
+                <ActivityIndicator x:Name="yuklemeIndicator" Grid.Row="1" Grid.Column="0" IsRunning="True" Color="#C10000" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <ScrollView x:Name="yorumlarscrollview" Grid.Row="1" Grid.Column="0" IsVisible="false" Orientation="Vertical" HorizontalScrollBarVisibility="Never" Padding="15,10,10,5">
+                    <Frame HasShadow="True" BackgroundColor="LightYellow" CornerRadius="5">
+                        <StackLayout>
+
+                            <Label Text="BUGÜNÜN YORUMU" BackgroundColor="Transparent" TextColor="Black" FontSize="Large" FontAttributes="Bold" FontFamily="Comforta" Margin="0,0,0,0"/>
+
+                            <BoxView HeightRequest="1" WidthRequest="300" HorizontalOptions="StartAndExpand" Color="Black"/>
+                            
+                            <local:CustomLabelJustify x:Name="GunlukYorumLabel" Text="" BackgroundColor="Transparent" TextColor="Black" FontSize="Medium" FontFamily="Comforta"/>
+                            
+                        </StackLayout>
+                    </Frame>
+                </ScrollView>
+
+                <StackLayout x:Name="AltKisimStackLayout" IsVisible="false" Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="15,0,0,0">
+                    <AbsoluteLayout HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Paylas_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                        <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="PAYLAŞ" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                    </AbsoluteLayout>
+
+                    <AbsoluteLayout HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                        <AbsoluteLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </AbsoluteLayout.GestureRecognizers>
+                        <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                        <Label Text="YORUMLARI OKU" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                    </AbsoluteLayout>
+                </StackLayout>
+
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

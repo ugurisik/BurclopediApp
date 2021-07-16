@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Burçlar.BurcOzelliklerContentPage"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             BackgroundImageSource="arkaplan_sade.png"
+             Title="BURÇ ÖZELLİKLERİ"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,5,0">
+
+            <Grid RowSpacing="3" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,25">
+                    <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5, 0, 1.5, 1.5" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label x:Name="BurcAdLabel" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1.5, -1, -1" />
+                </AbsoluteLayout>-->
+
+                <Image x:Name="LogoImage" Grid.Row="0" />
+                <Image Grid.Row="1" Source="cizgi.png" Margin="0,-40,0,0"/>
+
+                <controls:MTAdView x:Name="ReklamView" Grid.Row="2" HeightRequest="50" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                <ScrollView x:Name="yorumlarscrollview" Grid.Row="3" Orientation="Vertical" HorizontalScrollBarVisibility="Never">
+                    <Grid RowSpacing="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Frame Grid.Row="0" BackgroundColor="#E0FFFF" CornerRadius="5" HasShadow="True">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="ELEMENT" TextColor="Black" FontFamily="Comforta" FontSize="Small" FontAttributes="Bold" WidthRequest="120"/>
+                                    <Label x:Name="ElementLabel" TextColor="Black" FontFamily="Comforta" FontSize="Small" WidthRequest="100"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="UĞURLU SAYI" TextColor="Black" FontFamily="Comforta" FontSize="Small" FontAttributes="Bold" WidthRequest="120"/>
+                                    <Label x:Name="SayiLabel" TextColor="Black" FontFamily="Comforta" FontSize="Small" WidthRequest="100"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="UĞURLU GÜN" TextColor="Black" FontFamily="Comforta" FontSize="Small" FontAttributes="Bold" WidthRequest="120"/>
+                                    <Label x:Name="GunLabel" TextColor="Black" FontFamily="Comforta" FontSize="Small" WidthRequest="100"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="UĞURLU TAŞ" TextColor="Black" FontFamily="Comforta" FontSize="Small" FontAttributes="Bold" WidthRequest="120"/>
+                                    <Label x:Name="TasLabel" TextColor="Black" FontFamily="Comforta" FontSize="Small" WidthRequest="100"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="UĞURLU RENK" TextColor="Black" FontFamily="Comforta" FontSize="Small" FontAttributes="Bold" WidthRequest="120"/>
+                                    <Label x:Name="RenkLabel" TextColor="Black" FontFamily="Comforta" FontSize="Small" WidthRequest="100"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <StackLayout Grid.Row="1">
+
+                            <Frame BackgroundColor="#FFC0CB" CornerRadius="5" HasShadow="True" >
+                                <StackLayout>
+                                    <Label x:Name="KadinBaslikLabel" BackgroundColor="Transparent" TextColor="Black" FontSize="Large" FontAttributes="Bold" FontFamily="Comforta"/>
+
+                                    <BoxView HeightRequest="1" WidthRequest="200" HorizontalOptions="StartAndExpand" Color="Black"/>
+
+                                    <local:CustomLabelJustify x:Name="KadinOzellikLabel" Text="" TextColor="Black" FontSize="Medium" FontFamily="Comforta" LineBreakMode="WordWrap" />
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="#9BD8FF" CornerRadius="5" HasShadow="True">
+                                <StackLayout>
+                                    <Label x:Name="ErkekBaslikLabel" BackgroundColor="Transparent" TextColor="Black" FontSize="Large" FontAttributes="Bold" FontFamily="Comforta" Margin="0,25,0,0"/>
+
+                                    <BoxView HeightRequest="1" WidthRequest="200" HorizontalOptions="StartAndExpand" Color="Black"/>
+
+                                    <local:CustomLabelJustify x:Name="ErkekOzellikLabel" Text="" BackgroundColor="Transparent" TextColor="Black" FontSize="Medium" FontFamily="Comforta"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+        
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

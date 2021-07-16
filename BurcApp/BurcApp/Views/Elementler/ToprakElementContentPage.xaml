@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Elementler.ToprakElementContentPage"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             Title="ELEMENTLER"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,10,0">
+
+            <Frame Margin="0,25,0,10" HasShadow="True" BackgroundColor="#475d92" Padding="0" CornerRadius="10">
+                <Label Text="TOPRAK GRUBU" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" Padding="10" HorizontalOptions="Center" />
+            </Frame>
+
+            <ScrollView>
+                <StackLayout>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_boga_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="20 Nisan - 20 Mayıs" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_basak_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="23 Ağustos - 22 Eylül" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_oglak_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="22 Aralık - 19 Ocak" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Frame Padding="0" HasShadow="True" CornerRadius="10" BackgroundColor="White" Opacity="0.75" Margin="0,10,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="10,5">
+                            <local:CustomLabelJustify Text="   Toprak grubu burçları biçimlendirme, altyapı kurma ve meydana getirme vazifeleri görürler. Zodyak'ın üreticileridirler. Hayalleri gerçekleştirmek onların işidir. Kendilerinin veya yakınlarının rüyalarını gerçekleştirirler. Bütün iş evrelerine hakim olup çizim yapmadan bütçe çıkarmaya, iş akışına ve işi zamanında bitirmeye kadar bütün iş evrelerini iyi kavrarlar. Sorumluluk sahibi, yaptığı işin bilincinde olan ve kendilerini yaptıkları işe adayan kişilerdirler. Pratik ve gerçekçidirler. Dakik ve zamanlamaları da iyidir. Sadık, sabırlı ve dengelidirler." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+                            <local:CustomLabelJustify Text="   Tedbiri elden bırakmayan ani kararlar vermeyen adımlarını çok iyi düşünerek atarlar. Bu sebepten ötürü para enerji ve zamanlarını boşa harcamazlar. Yaptıkları planlar uzun vadelidir. Son derece kararlı, hırslı ve kuvvetli iradeleri sayesinde istedikleri her konuda çok başarılı olurlar." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="BOĞA: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Özelliklerini sahip olduklarıyla ve güvenlik arayışıyla gösterir. Duyarlı ve maddeye düşkündürler. Bu sebepten ötürü çok iyi müze yöneticileri olurlar. Kültürel mirasa, sanat eserlerine ve değerli görülen şeyleri toplamaya ve korumaya meraklılardır." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="BAŞAK: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Sağlık konularına düşkün olmalarıyla bilinirler. Birçok doktor ve biyolog başak burcundandır. Başak burcu evin yöneticisi olup sağlık, günlük işler ve servis kısmını yönetir. Düzenli, dakik olma ve çalışkanlıklarıyla bu burcun özelliklerini ortaya koyarlar. Mükemmeliyetçidirler. Yaptıkları işin kusursuz olması gerekir. Büyük yazarlar, kütüphaneciler, yöneticiler muhasebecilerin de çoğunluğu başak burcundan çıkar. Düzen ve dikkat isteyen işlerde kusursuzdurlar." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="OĞLAK: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Devlette, büyük işletmelerdeki hiyerarşik konumu ile kendisini gösterir. Devlette  olsun yada büyük firmalarda olsun düzen olmadığı zaman kaos ortamının olacağının bilincindedirler. Hiyerarşiye saygı duyup emir komuta zincirini iyi anlayıp takip eder. Bu sayede yada bu yüzden de diyebiliriz ki büyük firmalarda veya kuruluşlarda en sonunda yetkiye sahip olup itibar sahibi insanlar olurlar. Oğlak burçları genellikle şirket başkanları yada şirket yöneticileri olurlar." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

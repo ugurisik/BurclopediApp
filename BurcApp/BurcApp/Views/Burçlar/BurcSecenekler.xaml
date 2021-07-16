@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Burçlar.BurcSecenekler"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="Transparent"
+             >
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="False"
+            >
+        </animations:ScaleAnimation>
+    </pages:PopupPage.Animation>
+
+    <Frame x:Name="cerceve" BackgroundColor="#99D7FF" HasShadow="True" CornerRadius="60" BorderColor="Gray" Margin="50,100,50,25" WidthRequest="500">
+        <ScrollView>
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <!--<RowDefinition Height="65"/>-->
+                </Grid.RowDefinitions>
+
+                <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0" Margin="0,0,0,25" >
+                    <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+                    <Label x:Name="BurcAdLabel" Text="" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1" />
+                </AbsoluteLayout>-->
+                <Image x:Name="LogoImage" Grid.Row="0" />
+                <Image Grid.Row="1" Source="cizgi.png" Margin="0,-30,0,0"/>
+                <ImageButton Grid.Row="2" CommandParameter="1" Clicked="BurcYorumlarGit_Clicked" Source="btnBurcYorumlari.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <ImageButton Grid.Row="3" CommandParameter="2" Clicked="OzelliklerGit_Clicked" Source="btnBurcunOzellikleri.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <ImageButton Grid.Row="4" CommandParameter="3" Clicked="YukselenOzelliklerGit_Clicked" Source="btnYukselenOzellikleri.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <ImageButton Grid.Row="5" CommandParameter="4" Clicked="HediyeGit_Clicked" Source="btnHediyeSecimi.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <ImageButton Grid.Row="6" CommandParameter="5" Clicked="UnluGit_Clicked" Source="btnUnluler.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                <ImageButton Grid.Row="7" CommandParameter="6" Clicked="MeslekGit_Clicked" Source="btnUygunMeslekler.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+
+
+                <!--<AbsoluteLayout Grid.Row="0" Grid.Column="0" Margin="0,0,0,25" >
+                    <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+                    <Label x:Name="BurcAdLabel" Text="" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1" />
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="1" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BurcYorumlarGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <Image x:Name="BurcYorumlarImgBtn" Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+                    <Label Text="Burç Yorumları" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1" />
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="2" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OzelliklerGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label Text="Burcun Özellikleri" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="3" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="YukselenOzelliklerGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label Text="Yükselen Burç Özellikleri" BackgroundColor="Transparent" TextColor="White" FontSize="Small" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="4" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="HediyeGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label Text="Hediye Seçimi" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="5" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="UnluGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" WidthRequest="500" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label Text="Ünlüler" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Row="6" Grid.Column="0" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MeslekGit_Clicked"/>
+                    </AbsoluteLayout.GestureRecognizers>
+                    <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" WidthRequest="500" AbsoluteLayout.LayoutFlags="All"/>
+                    <Label Text="Uygun Meslekler" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5, -1, -1"/>
+                </AbsoluteLayout>-->
+            </Grid>
+        </ScrollView>
+    </Frame>
+    
+</pages:PopupPage>

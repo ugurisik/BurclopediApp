@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.AnaSayfaDetail"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="BURÇLAR"
+             BackgroundImageSource="arkaplanmenu.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start" Margin="0" Padding="0">
+                <ImageButton Clicked="Menu_Clicked" Source="btn_hamburgermenu.png" Aspect="AspectFit" BackgroundColor="Transparent" />
+            </StackLayout>
+
+            <Grid Grid.Row="1" VerticalOptions="FillAndExpand">
+
+                <Image Source="btn_background_menu.png" VerticalOptions="StartAndExpand" Aspect="Fill"></Image>
+
+                <Grid Margin="0,20,0,0" ColumnSpacing="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" CommandParameter="1" Clicked="Button_Clicked" Source="btn_koc_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" CommandParameter="2" Clicked="Button_Clicked" Source="btn_boga_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="0" Grid.Column="2" CommandParameter="3" Clicked="Button_Clicked" Source="btn_ikizler_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="1" Grid.Column="0" CommandParameter="4" Clicked="Button_Clicked" Source="btn_yengec_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="1" Grid.Column="1" CommandParameter="5" Clicked="Button_Clicked" Source="btn_aslan_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="1" Grid.Column="2" CommandParameter="6" Clicked="Button_Clicked" Source="btn_basak_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="2" Grid.Column="0" CommandParameter="7" Clicked="Button_Clicked" Source="btn_terazi_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="2" Grid.Column="1" CommandParameter="8" Clicked="Button_Clicked" Source="btn_akrep_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="2" Grid.Column="2" CommandParameter="9" Clicked="Button_Clicked" Source="btn_yay_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="3" Grid.Column="0" CommandParameter="10" Clicked="Button_Clicked" Source="btn_oglak_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="3" Grid.Column="1" CommandParameter="11" Clicked="Button_Clicked" Source="btn_kova_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                    <ImageButton Grid.Row="3" Grid.Column="2" CommandParameter="12" Clicked="Button_Clicked" Source="btn_balik_menu.png" BackgroundColor="Transparent" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

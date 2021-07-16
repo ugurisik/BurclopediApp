@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Elementler.SuElementContentPage"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             Title="ELEMENTLER"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,10,0">
+
+            <Frame Margin="0,25,0,10" HasShadow="True" BackgroundColor="#475d92" Padding="0" CornerRadius="10">
+                <Label Text="SU GRUBU" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" Padding="10" HorizontalOptions="Center" />
+            </Frame>
+
+            <ScrollView>
+                <StackLayout>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_yengec_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="22 Haziran - 22 Temmuz" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_akrep_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="23 Ekim - 21 Kasım" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_balik_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="19 Şubat - 20 Mart" FontFamily="Comforta" FontSize="Medium" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Frame Padding="0" HasShadow="True" CornerRadius="10" BackgroundColor="White" Opacity="0.75" Margin="0,10,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="10,5">
+                            <local:CustomLabelJustify Text="   Su burcu insanı derdinizi dinler, sizlere her konuda yardımcı olur feraha ulaşma yolunuzda. Sorununuzu kendisininmiş gibi görüp bu şekilde yardım eder. Sizi can-ı gönülden dinler, iyi tavsiyelerde bulunur. İnsanların dertlerini dinleyip onlara yardımcı olmaktan çok fazla yıpranırlar. Bu yüzden ara sıra yalnız kalıp toparlanma ihtiyacı duyarlar. Su grubu ruhu yönetir. Hayal gücü çok geniştir ve baskılanmayı, sınırlandırılmayı hiç sevmezler. Ayrıca çok yaratıcıdır. Fotoğrafçılık, resim, edebiyat ve dansta diğer insanlardan ilham alarak yaratırlar. Bu bağlamda yaratıcılıkla ilgili işlerde veya kendi işlerinde çalışmaktan zevk alırlar. Keskin hisleriyle finansal alanda da başarılı olabilirler." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="YENGEÇ: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Ailesine olan düşkünlüğüyle özelliklerini ortaya koyar. Ailesini sever, korur besler ve büyütür. İyi bir yuva kurucu olmasıyla onun için en önemli şey eşi ve çocuklarıyla sevgisini paylaşmaktır." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="AKREP: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Parasal ve seksüel alanlarda ön plandadır. Astrolojide 8. evin temsilcisi olan bu burç doğumu, ölümü ve yeniden doğuşu temsil eder. Bu ev aynı zamanda parayı da temsil eder. Başkalarının paralarını idare etmekte iyidirler. Kendileri hakkında ser verip sır vermezler." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+
+                            <local:CustomLabelJustify>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="BALIK: " FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" TextColor="#c10000" />
+                                        <Span Text="Su grubu burçları arasında sonuncudur. Balık, burcundan önce bahsettiğimiz burçlardan birer özellik almıştır. Bu sayede de bütün burçlarla iyi ilişkiler içerisindedir. Maneviyata çok önem verirler. Bu yüzden diğer insanlara çok fazla yardım ederler.  Kova burçları genel yardımlarda bulunurken, balık burcu insanlara birebir yardımcı olur. Başkaları için kendilerini feda etmekten çekinmezler. Bu bağlamda balık burcu demek fedakarlık demektir." FontSize="Medium" FontFamily="Comforta" TextColor="Black" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </local:CustomLabelJustify>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

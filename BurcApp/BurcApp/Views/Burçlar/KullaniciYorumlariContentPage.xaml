@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Burçlar.KullaniciYorumlariContentPage"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="SİZLERİN YORUMLARI"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="yuklemeIndicator" IsRunning="True" Color="#223965" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            
+            <ListView x:Name="YorumlarListView" IsVisible="false" HasUnevenRows="True" ItemSelected="YorumlarListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="ViewCell_Tapped" Appearing="ViewCell_Appearing">
+                            <ViewCell.View>
+                                <Frame CornerRadius="10" BackgroundColor="White" HasShadow="True" Margin="5,2,5,0">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding KullaniciAd}" TextColor="Black" FontFamily="Comforta" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="StartAndExpand" />
+                                            <Label Text="{Binding Saat}" TextColor="Black" FontFamily="Comforta" FontSize="Small" HorizontalOptions="EndAndExpand" />
+                                        </StackLayout>
+                                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+
+                                        <local:CustomLabelJustify x:Name="YorumLabel" Text="{Binding Yorum}" TextColor="Black" FontSize="Medium" MaxLines="3" LineBreakMode="TailTruncation" FontFamily="Comforta" Margin="0,10,0,0">
+                                        </local:CustomLabelJustify>
+                                        <Label x:Name="DevamiLabel" TextColor="#223965" FontSize="Small" />
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="YorumYazAbsoluteLayout" Text="YORUM YAZ" IsVisible="false" BackgroundColor="#223965" Clicked="TapGestureRecognizer_Tapped" TextColor="White" Padding="10,5" HeightRequest="45" CornerRadius="10" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" />
+
+            <!--<AbsoluteLayout x:Name="YorumYazAbsoluteLayout" IsVisible="false" xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.PressedScale="0.75" >
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </AbsoluteLayout.GestureRecognizers>
+                <ImageButton Source="burc_yorum_button.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                <Label Text="YORUM YAZ" BackgroundColor="Transparent" TextColor="White" FontSize="Medium" FontAttributes="Bold" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.55, -1, -1"/>
+            </AbsoluteLayout>-->
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

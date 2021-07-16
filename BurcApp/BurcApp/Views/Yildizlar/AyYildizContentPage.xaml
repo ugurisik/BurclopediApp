@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurcApp.Views.Yildizlar.AyYildizContentPage"
+             xmlns:local="clr-namespace:BurcApp.CustomRenderer"
+             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             Title="YILDIZLAR"
+             BackgroundImageSource="arkaplan_sade.png"
+             NavigationPage.HasNavigationBar="False"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,10,0">
+
+            <Frame Margin="0,25,0,10" HasShadow="True" BackgroundColor="#475d92" Padding="0" CornerRadius="10">
+                <Label Text="AY GEZEGENİ" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" Padding="10" HorizontalOptions="Center" />
+            </Frame>
+
+            <!--<AbsoluteLayout Margin="0,0,0,25">
+                <Image Source="btn_burc_giris_ust_burc.png" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5, 0, 1.5, 1.5" AbsoluteLayout.LayoutFlags="All"/>
+                <Label Text="AY" BackgroundColor="Transparent" TextColor="White" FontSize="Large" FontFamily="Comforta" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1.5, -1, -1" />
+            </AbsoluteLayout>-->
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Padding="10,5" HasShadow="True" BackgroundColor="White" Opacity="0.75" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="logo_yengec_uyum.png" HeightRequest="50" WidthRequest="50" Opacity="1" />
+                                <Label Text="22 Haziran - 22 Temmuz" FontFamily="Comforta" FontSize="16" TextColor="Black" WidthRequest="200" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Frame Padding="0" HasShadow="True" CornerRadius="10" BackgroundColor="White" Opacity="0.75" Margin="0,10,0,0" VerticalOptions="FillAndExpand">
+                        <StackLayout Padding="10,5">
+                            <local:CustomLabelJustify Text="   Dünyamızın uydusu olan Ay gezegenimize çok yakın olduğu için üzerimizde doğrudan bir etkisi vardır. Bunu gel-git (medcezir) dediğimiz olayla da gözlemleyebiliriz. Sıvılar üzerinde etkisi olan Ay, vücudumuzun yüzde yetmişi su olan bizlerin üzerinde de doğrudan etkisi vardır. Bir yıldız haritasında Ay'ın konumu çok önemlidir ve o kimsenin yaşam karşısındaki tutumunu, bilinçaltı tepkilerini ve güçlü temel davranışlarını gösterir. Bazı durumlarda Ay daha güçlü bir konumdadır ve etkileri Güneşin bulunduğu burcun özelliklerinden daha belirgin olabilir. Bir insanın diğerleri üzerinde bıraktığı ilk etki Ay'ın onun yıldız haritasındaki konumu hakkında bilgi verebilir." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify Text="   Genel olarak duyguları temsil eden Ay, sizin en derin duygularınızı, içgüdülerinizi, sezgilerinizi, heyecanlarınızı ve tepkilerinizi açığa çıkarır. Aynı zamanda özel hayatınızı, ev ortamınızı yönetir. Güneş sizin geleceğinizi temsil ederken Ay ise geçmişinizi temsil eder. Ay sizin köklerinizi, duygusal gelişmelerinizi, temelinizi yönetir." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+
+                            <local:CustomLabelJustify Text="   Astrolojide Ay, Yengeç burcunu yönetir. Her gezegende 2-3 gün kalır ve 28 günde Zodyak turunu tamamlar. Yeni Ay doğduğu zaman başlangıçlar, yeni şeyler için en uygun zamandır. İki hafta sonra dolunay olduğu zaman ise (haritanızda düştüğü yere göre) olayları sonuçlandırma zamanıdır." FontFamily="Comforta" FontSize="Medium" TextColor="Black" />
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
